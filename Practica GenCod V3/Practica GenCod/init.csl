@@ -1,0 +1,18 @@
+//Load Sintactic
+//Load Semantic
+Load GenCod
+
+Compila("LA MEVA PROVA DEL COMPILADOR",InStrStream("\{
+function factorial(n:integer):integer
+{
+    if n<=0 then return 1;
+    else return n*factorial(n-1);
+}
+procedure main()
+{
+    print "Factorial de ",0," es ",factorial(0),"\\n";
+    print "Factorial de ",5," es ",factorial(5),"\\n";
+}    
+\}"),true,false);
+
+//GraficArbreSintactic();

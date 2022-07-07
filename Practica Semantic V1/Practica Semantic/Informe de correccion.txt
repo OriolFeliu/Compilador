@@ -1,0 +1,88 @@
+================================================================================
+INFORME OBLIGATORIO DE CORRECCION DE LA PRACTICA ===============================
+================================================================================
+Alumno.....: (Oriol,Feliu Juarez,1492319,1492319@uab.cat)
+Nombre.....: Oriol
+Apellidos..: Feliu Juarez
+NIA........: 1492319
+e-mail.....: 1492319@uab.cat
+
+-------------------------------------------------------------------------
+
+Fichero........: GenCodSolucio.csl
+NIA Entrega....: 1000000
+Fecha..........: 27/6/2022
+Hora...........: 16:58
+Ampliaciones...: 
+    ArrayRangos DeclaracionMultiplesParametros DeclaracionVariableAuto
+    InstruccionBreak InstruccionForTo InstruccionRepeatUntil OperadorMin
+    OperadorPow
+
+Ver test de las ampliaciones...: 
+    ArrayRangos DeclaracionMultiplesParametros DeclaracionVariableAuto
+    InstruccionBreak InstruccionForTo InstruccionRepeatUntil OperadorMin
+    OperadorPow
+
+
+################################################################################
+###                  SINTACTICO OBLIGATORIO: TEST QUE FALLAN                 ###
+################################################################################
+
+################################################################################
+###                   SINTACTICO ADICIONAL: TEST QUE FALLAN                  ###
+################################################################################
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+TEST SINTACTICO SintacticoOperadorMinErrorSintactico1 OPCIONAL
+DESCRIPCION: Verifica que se detectan correctamente errores sintácticos en min
+CODIGO FUENTE A COMPILAR:
+-------------------------
+/*  1*/    procedure main()
+/*  2*/    {
+/*  3*/        print min{20};
+/*  4*/    }
+/*  5*/    
+--------------------------------------------------------
+Analitzant SintacticoOperadorMinErrorSintactico1
+Error a la linea 3 del fitxer SintacticoOperadorMinErrorSintactico1
+            print min{20};
+                         ^ Tipus de dades erroni a print
+Call stack:
+0579B039: Constructor BackTrace(n:#Int)
+0578968F: Constructor Exception(Args...)
+05763267: Constructor SemanticError(Args...)
+0586F118: Proc PARSER_instruccio()
+05873352: Proc PARSER_bloc()
+0585EF00: Proc PARSER_DecProc()
+0587ECCB: Proc PARSER_programa()
+0587F7D2: Proc Compila(FileName:String,st:Whole,VeureCodiGenerat:Whole,VeureCodiExecucio:Whole)
+0577F51B: Proc TestSintactico(Nombre:Whole,extensions:Whole,descripcion:Whole,Keywords:Whole,Obligatorio:Whole,fuente:Whole,LineaError1:Whole,LineaError2:Whole,SemanticError:Whole,SubTest:Whole)
+0576C922: Proc pruebas()
+
+TEST SintacticoOperadorMinErrorSintactico1 <<<FALLA>>> 3 (3,3)
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+################################################################################
+###                  SEMANTICO OBLIGATORIO: TEST QUE FALLAN                  ###
+################################################################################
+
+================================================================================
+RESUMEN OBLIGATORIO ============================================================
+================================================================================
+
+NOTAS NO VALIDAS POR RESTRINGIR LOS TEST A PROBAR
+
+Resultados sintactico ----------------------------------------------------------
+Test sintactico obligatorio OK............: 76 (100%) CORRECTO
+Test sintactico adicional OK..............: 43 (97.7273%)
+NOTA SINTACTICO...........................: 9.88636
+
+TEST ADICIONALES QUE FALLAN (1):
+    SintacticoOperadorMinErrorSintactico1
+
+Resultados semantico -----------------------------------------------------------
+Test semantico obligatorio OK.............: 83 (100%) CORRECTO
+Test semantico adicional OK...............: 29 (76.3158%)
+NOTA SEMANTICO............................: 8.81579
+
+

@@ -1,0 +1,290 @@
+================================================================================
+INFORME OBLIGATORIO DE CORRECCION DE LA PRACTICA ===============================
+================================================================================
+Alumno.....: (Oriol,Feliu,1492319,1492319@uab.cat)
+Nombre.....: Oriol
+Apellidos..: Feliu
+NIA........: 1492319
+e-mail.....: 1492319@uab.cat
+
+-------------------------------------------------------------------------
+
+Fichero........: GenCodSolucio.csl
+NIA Entrega....: 1000000
+Fecha..........: 29/6/2022
+Hora...........: 15:29
+Ampliaciones...: 
+    ArrayRangos DeclaracionMultiplesParametros DeclaracionVariableAuto
+    InstruccionBreak InstruccionForTo InstruccionRepeatUntil OperadorMin
+    OperadorPow
+
+Ver test de las ampliaciones...: 
+    ArrayRangos DeclaracionMultiplesParametros DeclaracionVariableAuto
+    InstruccionBreak InstruccionForTo InstruccionRepeatUntil OperadorMin
+    OperadorPow
+
+
+################################################################################
+###                  SINTACTICO OBLIGATORIO: TEST QUE FALLAN                 ###
+################################################################################
+
+################################################################################
+###                   SINTACTICO ADICIONAL: TEST QUE FALLAN                  ###
+################################################################################
+
+################################################################################
+###                  SEMANTICO OBLIGATORIO: TEST QUE FALLAN                  ###
+################################################################################
+
+################################################################################
+###                   SEMANTICO ADICIONAL: TEST QUE FALLAN                   ###
+################################################################################
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+TEST SEMANTICO SemanticoInstruccionBreakTablaWhile1 OPCIONAL
+DESCRIPCION: Verifica que se crea el separador de bucle
+CODIGO FUENTE A COMPILAR:
+-------------------------
+/*  1*/    procedure main()
+/*  2*/    {
+/*  3*/        var i:Integer;
+/*  4*/        i=0;
+/*  5*/        while i<10 do {
+/*  6*/            IMPRIMIR_TAULA_DE_SIMBOLS;
+/*  7*/            PrintLn i;
+/*  8*/            i=i+1;
+/*  9*/        }
+/* 10*/    }
+/* 11*/    
+--------------------------------------------------------
+Analitzant SemanticoInstruccionBreakTablaWhile1
+
+=============================================================
+TAULA DE SIMBOLS ============================================
+=============================================================
+ETSFuncio: Nom=main, Classe=Void, TipusFuncio=TFProcediment, TeCos=True, Posicio=<Etiqueta main():055841C8>, DespRetorn=8, TipusRetorn=TVoid
+================ TSSeparadorFuncio Classe=Void, Funció=unbound, VarSz=Unbound
+================ TSSeparador ======================
+ETSVariable: Nom=i, Posició=-4, Lectura=True, Escriptura=True, Tipus=TInteger
+================ TSSeparador ======================
+================ TSSeparador ======================
+=============================================================
+=============================================================
+
+=====================================================================
+TEMPS D'EXECUCIO
+
+Execució sense errors
+=====================================================================
+Error en la tabla de simbolos:
+Tabla de simbolos correcta: 
+    =============================================================
+    TAULA DE SIMBOLS SEMANTIC ===================================
+    =============================================================
+    ETSFuncio: Nom=main, Classe=Void, TipusFuncio=TFProcediment, TeCos=True, TipusRetorn=TVoid
+    ================ TSSeparadorFuncio Classe=Void, Funció=unbound
+    ================ TSSeparador ======================
+    ETSVariable: Nom=i, Lectura=True, Escriptura=True, Tipus=TInteger
+    ================== TSSeparadorBucle ========================
+    ================ TSSeparador ======================
+    =============================================================
+    =============================================================
+    
+Tabla de simbolos practica: 
+    =============================================================
+    TAULA DE SIMBOLS SEMANTIC ===================================
+    =============================================================
+    ETSFuncio: Nom=main, Classe=Void, TipusFuncio=TFProcediment, TeCos=True, TipusRetorn=TVoid
+    ================ TSSeparadorFuncio Classe=Void, Funció=unbound
+    ================ TSSeparador ======================
+    ETSVariable: Nom=i, Lectura=True, Escriptura=True, Tipus=TInteger
+    ================ TSSeparador ======================
+    ================ TSSeparador ======================
+    =============================================================
+    =============================================================
+    
+    
+TEST SemanticoInstruccionBreakTablaWhile1 <<<FALLA>>> Unbound (Unbound,Unbound)
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+TEST SEMANTICO SemanticoInstruccionBreakTablaRepeatUntil1 OPCIONAL
+DESCRIPCION: Verifica que se crea el separador de bucle
+CODIGO FUENTE A COMPILAR:
+-------------------------
+/*  1*/    procedure main()
+/*  2*/    {
+/*  3*/        var i:Integer;
+/*  4*/        i=0;
+/*  5*/        repeat {
+/*  6*/            IMPRIMIR_TAULA_DE_SIMBOLS;
+/*  7*/            PrintLn i;
+/*  8*/            i=i+1;
+/*  9*/        } until i>=10;
+/* 10*/    }
+/* 11*/    
+--------------------------------------------------------
+Analitzant SemanticoInstruccionBreakTablaRepeatUntil1
+
+=============================================================
+TAULA DE SIMBOLS ============================================
+=============================================================
+ETSFuncio: Nom=main, Classe=Void, TipusFuncio=TFProcediment, TeCos=True, Posicio=<Etiqueta main():0558BC64>, DespRetorn=8, TipusRetorn=TVoid
+================ TSSeparadorFuncio Classe=Void, Funció=unbound, VarSz=Unbound
+================ TSSeparador ======================
+ETSVariable: Nom=i, Posició=-4, Lectura=True, Escriptura=True, Tipus=TInteger
+================ TSSeparador ======================
+================ TSSeparador ======================
+=============================================================
+=============================================================
+
+=====================================================================
+TEMPS D'EXECUCIO
+
+Execució sense errors
+=====================================================================
+Error en la tabla de simbolos:
+Tabla de simbolos correcta: 
+    =============================================================
+    TAULA DE SIMBOLS SEMANTIC ===================================
+    =============================================================
+    ETSFuncio: Nom=main, Classe=Void, TipusFuncio=TFProcediment, TeCos=True, TipusRetorn=TVoid
+    ================ TSSeparadorFuncio Classe=Void, Funció=unbound
+    ================ TSSeparador ======================
+    ETSVariable: Nom=i, Lectura=True, Escriptura=True, Tipus=TInteger
+    ================== TSSeparadorBucle ========================
+    ================ TSSeparador ======================
+    =============================================================
+    =============================================================
+    
+Tabla de simbolos practica: 
+    =============================================================
+    TAULA DE SIMBOLS SEMANTIC ===================================
+    =============================================================
+    ETSFuncio: Nom=main, Classe=Void, TipusFuncio=TFProcediment, TeCos=True, TipusRetorn=TVoid
+    ================ TSSeparadorFuncio Classe=Void, Funció=unbound
+    ================ TSSeparador ======================
+    ETSVariable: Nom=i, Lectura=True, Escriptura=True, Tipus=TInteger
+    ================ TSSeparador ======================
+    ================ TSSeparador ======================
+    =============================================================
+    =============================================================
+    
+    
+TEST SemanticoInstruccionBreakTablaRepeatUntil1 <<<FALLA>>> Unbound (Unbound,Unbound)
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+TEST SEMANTICO SemanticoInstruccionBreakTablaForTo1 OPCIONAL
+DESCRIPCION: Verifica que se crea el separador de bucle
+CODIGO FUENTE A COMPILAR:
+-------------------------
+/*  1*/    procedure main()
+/*  2*/    {
+/*  3*/        var i:Integer;
+/*  4*/        for i=0 to 10 do {
+/*  5*/            IMPRIMIR_TAULA_DE_SIMBOLS;
+/*  6*/            PrintLn i;
+/*  7*/        }
+/*  8*/    }
+/*  9*/    
+--------------------------------------------------------
+Analitzant SemanticoInstruccionBreakTablaForTo1
+
+=============================================================
+TAULA DE SIMBOLS ============================================
+=============================================================
+ETSFuncio: Nom=main, Classe=Void, TipusFuncio=TFProcediment, TeCos=True, Posicio=<Etiqueta main():05593408>, DespRetorn=8, TipusRetorn=TVoid
+================ TSSeparadorFuncio Classe=Void, Funció=unbound, VarSz=Unbound
+================ TSSeparador ======================
+ETSVariable: Nom=i, Posició=-4, Lectura=True, Escriptura=True, Tipus=TInteger
+================ TSSeparador ======================
+================ TSSeparador ======================
+=============================================================
+=============================================================
+
+=====================================================================
+TEMPS D'EXECUCIO
+
+Execució sense errors
+=====================================================================
+Error en la tabla de simbolos:
+Tabla de simbolos correcta: 
+    =============================================================
+    TAULA DE SIMBOLS SEMANTIC ===================================
+    =============================================================
+    ETSFuncio: Nom=main, Classe=Void, TipusFuncio=TFProcediment, TeCos=True, TipusRetorn=TVoid
+    ================ TSSeparadorFuncio Classe=Void, Funció=unbound
+    ================ TSSeparador ======================
+    ETSVariable: Nom=i, Lectura=True, Escriptura=True, Tipus=TInteger
+    ================ TSSeparador ======================
+    ================== TSSeparadorBucle ========================
+    ================ TSSeparador ======================
+    =============================================================
+    =============================================================
+    
+Tabla de simbolos practica: 
+    =============================================================
+    TAULA DE SIMBOLS SEMANTIC ===================================
+    =============================================================
+    ETSFuncio: Nom=main, Classe=Void, TipusFuncio=TFProcediment, TeCos=True, TipusRetorn=TVoid
+    ================ TSSeparadorFuncio Classe=Void, Funció=unbound
+    ================ TSSeparador ======================
+    ETSVariable: Nom=i, Lectura=True, Escriptura=True, Tipus=TInteger
+    ================ TSSeparador ======================
+    ================ TSSeparador ======================
+    =============================================================
+    =============================================================
+    
+    
+TEST SemanticoInstruccionBreakTablaForTo1 <<<FALLA>>> Unbound (Unbound,Unbound)
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+TEST SEMANTICO SemanticoDeclaracionArrayRangosErrorSemantico1 OPCIONAL
+DESCRIPCION: Verifica que se detectan correctamente errores semanticos en declaracion de arrays con rangos
+CODIGO FUENTE A COMPILAR:
+-------------------------
+/*  1*/    procedure main()
+/*  2*/    {
+/*  3*/        Var a:array [10..5] of integer;
+/*  4*/    }
+/*  5*/    
+--------------------------------------------------------
+Analitzant SemanticoDeclaracionArrayRangosErrorSemantico1
+=====================================================================
+TEMPS D'EXECUCIO
+
+Execució sense errors
+=====================================================================
+TEST SemanticoDeclaracionArrayRangosErrorSemantico1 <<<FALLA>>> Unbound (3,3)
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+################################################################################
+###             GENERACION DE CODIGO OBLIGATORIO: TEST QUE FALLAN            ###
+################################################################################
+
+================================================================================
+RESUMEN OBLIGATORIO ============================================================
+================================================================================
+
+NOTAS NO VALIDAS POR RESTRINGIR LOS TEST A PROBAR
+
+Resultados sintactico ----------------------------------------------------------
+Test sintactico obligatorio OK............: 76 (100%) CORRECTO
+Test sintactico adicional OK..............: 44 (100%)
+NOTA SINTACTICO...........................: 10
+
+
+Resultados semantico -----------------------------------------------------------
+Test semantico obligatorio OK.............: 83 (100%) CORRECTO
+Test semantico adicional OK...............: 34 (89.4737%)
+NOTA SEMANTICO............................: 9.47368
+
+
+Resultados generacion de codigo ------------------------------------------------
+Test generación de código obligatorio OK..: 77 (100%) CORRECTO
+Test generación de código adicional OK....: 24 (72.7273%)
+NOTA GENCOD...............................: 8.63636
+
+
